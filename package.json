@@ -1,0 +1,30 @@
+{
+  "name": "exp1",
+  "version": "1.0.0",
+  "description": "",
+
+  "scripts": {
+    "dev": "nodemon ./bin/www",
+    "start": "node ./bin/www"
+  
+  },
+  
+  "author": "chandan",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "debug": "^4.3.4",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "http-errors": "^2.0.0",
+    "mongoose": "^7.5.1",
+    "morgan": "^1.10.0",
+    "node": "^20.6.0",
+    "shortid": "^2.2.16",
+    "start": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

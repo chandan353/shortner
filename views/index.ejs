@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>SHORTNER</title>
+</head>
+<body style="background-color: rgb(36, 209, 114);">
+    <div class="super">
+        <div class="container">
+            <div class="main">
+                <div class="name">
+                    <h1>URL SHORTNER</h1>
+                </div>
+                <div class="new-main">
+                    <form action="/shortUrls" method="POST" class="my-4 formm-inline">
+                        <label for="fullurl" class="sr-only"></label>
+                        <input type="url" placeholder="Enter Your Full Url Here" name="fullurl" id="fullurl" class="form-control col mr-2">
+                        <button class="btn btn-success" type="submit">Shorten</button>
+                    </form>
+                </div>
+               
+                <div class="second-main">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Full Url</th>
+                                <th>Short Url</th>
+                                <th>Clicks</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% shortUrls.forEach(shortUrl => { %>
+                                <tr>
+                                    <td><a href="<%= shortUrl.full %>"><%= shortUrl.full %></a></td>
+                                    <td><a href="<%= shortUrl.short %>"><%= shortUrl.short %></a></td>
+                                    <td><%= shortUrl.clicks %></td>
+                                </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
+                </div>     
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
