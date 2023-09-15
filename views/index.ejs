@@ -35,8 +35,8 @@
                             <% shortUrls.forEach(shortUrl => { %>
                                 <tr>
                                     <td><a href="<%= shortUrl.full %>"><%= shortUrl.full %></a></td>
-                                    <td><a href="<%= shortUrl.short %>"><%= shortUrl.short %></a></td>
-                                    <td>shortner/<%= shortUrl.clicks %></td>
+                                    <td>shortner/<a href="<%= shortUrl.short %>"><%= shortUrl.short %></a></td>
+                                    <td><%= shortUrl.clicks %></td>
                                 </tr>
                             <% }) %>
                         </tbody>
