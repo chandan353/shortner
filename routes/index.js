@@ -8,7 +8,7 @@ router.get('/shortner',async(req, res, next) => {
 })
 router.post('/shortUrls',async(req,res) => {
   await ShortUrl.create({full: req.body.fullurl })
-  res.redirect('/')
+  res.redirect('/shortner')
 })
 router.get('/:shortUrl',async(req,res) =>{
   const shortUrl = await ShortUrl.findOne({short: req.params.shortUrl })
